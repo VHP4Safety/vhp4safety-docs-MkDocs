@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to VHP4Safety-Docs's documentation!
+Welcome to the VHP4Safety documentation!
 ===========================================
 Hi There! You have reached the public documentation pages for the 
 Virtual Human Platform for Safety Evaluation of Chemicals. This is 
