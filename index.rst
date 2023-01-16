@@ -5,6 +5,11 @@
 
 Welcome to VHP4Safety-Docs's documentation!
 ===========================================
+Hi There! You have reached the public documentation pages for the 
+Virtual Human Platform for Safety Evaluation of Chemicals. This is 
+a large Dutch research project, funded by NWO. These pages contain 
+information, documentation, installation instructions and demos on how 
+to use the software, models and data generated in the project.
 
 .. toctree::
    :maxdepth: 2
