@@ -15,9 +15,10 @@ to use the software, models and data generated in the project.
    :maxdepth: 2
    :caption: Contents:
 
-   Introduction/intro.rst
-   Topics/AOPs.rst
-   Topics/Cheminformatics.rst
+   Introduction/intro
+   Services/Service-1
+   Topics/AOPs
+   Topics/Cheminformatics
    
 
 
