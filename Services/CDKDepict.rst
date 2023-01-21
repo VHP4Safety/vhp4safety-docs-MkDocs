@@ -1,6 +1,8 @@
 Depicting chemical structures with SMILES and CDK Depicts
 ++++++++++++++++++++++++++++
+
 .. raw:: html
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org/",
