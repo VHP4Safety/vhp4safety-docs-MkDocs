@@ -1,18 +1,21 @@
 Services
 ++++++++++++++++++++++++++++
 
-Cheminformatics SMILES generation
+Service-1
 ============================
+
+Metadata
+----------------------------
+.. include:: Meta/data.rst
+
 
 Features
 -------------
 
-
 Demos
 -------------
 
-
-SMILES2Graph
+Service-2
 =========================
 
 Features
@@ -21,7 +24,7 @@ Features
 Demos
 ---------------------------
 
-Mol2Vec
+Service-3
 ============================
 
 Features
@@ -30,5 +33,11 @@ Features
 Demos
 ---------------------------
 
-En-Tox Language Transformer
+Service-4
 ===========================
+
+Features
+---------------------------
+
+Demos
+---------------------------
