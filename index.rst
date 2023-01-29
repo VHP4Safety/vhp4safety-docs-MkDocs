@@ -12,11 +12,12 @@ information, documentation, installation instructions and demos on how
 to use the software, models and data generated in the project.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Contents:
 
    Introduction/intro.rst
-   Services/Services.rst
+   Services/aop_wiki/aop_wiki.rst
+   Services/cdk_depict/cdk_depict.rst
    Topics/Topics.rst
    Tutorials/Tutorials.rst
       
