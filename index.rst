@@ -18,6 +18,7 @@ to use the software, models and data generated in the project.
    Introduction/intro.rst
    Services/aop_wiki/aop_wiki.rst
    Services/cdk_depict/cdk_depict.rst
+   Services/sysrev/sysrev.rst
    Topics/Topics.rst
    Tutorials/Tutorials.rst
       
