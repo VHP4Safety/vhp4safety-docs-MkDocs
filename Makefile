@@ -1,6 +1,12 @@
 
 # Minimal makefile for Sphinx documentation
 #
+
+metadata: 
+	python Services/aop_wiki/meta.py
+	python Services/cdk_depict/meta.py
+	python Services/sysrev/meta.py
+
 # You can set these variables from the command line, and also
 # from the environment for the first two.
 SPHINXOPTS    ?=
