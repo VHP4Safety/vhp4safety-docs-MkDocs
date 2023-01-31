@@ -13,10 +13,10 @@ pip install spinx_rtd_theme
 ```
 
 ## Build locally
-To build the site locally run from the project root in the Terminal:
+To update all content, get external content and build the site locally run from the project root in the Terminal:
 
 ```
-make metadata && make html
+make externals && make metadata && make html 
 ```
 
 To load the locally build docs, open the file `index.html` in `./html` 

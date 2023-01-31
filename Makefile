@@ -2,10 +2,18 @@
 # Minimal makefile for Sphinx documentation
 #
 
+# update metadata
 metadata: 
 	python Services/aop_wiki/meta.py
 	python Services/cdk_depict/meta.py
 	python Services/sysrev/meta.py
+
+
+# update catalogue and clean up
+catalog: $(eval SHELL:=/bin/bash)
+	curl -O https://raw.githubusercontent.com/VHP4Safety/cloud/main/docs/catalog.md
+	mdToRst catalog.md | tee Services/catalog.rst
+	rm -rf catalog.md
 
 # You can set these variables from the command line, and also
 # from the environment for the first two.

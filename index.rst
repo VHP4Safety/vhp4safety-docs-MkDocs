@@ -16,6 +16,7 @@ to use the software, models and data generated in the project.
    :caption: Contents:
 
    Introduction/intro.rst
+   Services/catalog.rst
    Services/aop_wiki/aop_wiki.rst
    Services/cdk_depict/cdk_depict.rst
    Services/sysrev/sysrev.rst
