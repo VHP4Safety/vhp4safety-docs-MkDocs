@@ -1,3 +1,8 @@
+.. figure:: https://vhp4safety.nl/wp-content/uploads/sites/725/2021/05/VHP-LOGO-100mm-RGB.png
+   :alt: Text to show on mouseover
+
+   alt text for screen readers
+
 VHP4Safety Cloud catalog
 ========================
 

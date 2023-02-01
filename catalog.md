@@ -1,6 +1,4 @@
-<img width="300" align="right"
-     alt="VHP4Safety logo" 
-     src="https://vhp4safety.nl/wp-content/uploads/sites/725/2021/05/VHP-LOGO-100mm-RGB.png">
+![alt text for screen readers](https://vhp4safety.nl/wp-content/uploads/sites/725/2021/05/VHP-LOGO-100mm-RGB.png "Text to show on mouseover")
 
 # VHP4Safety Cloud catalog
 Below you find an overview of services available in the context of the VHP4Safety Platform.
