@@ -7,10 +7,13 @@ origin: $(eval SHELL:=/bin/bash)
 	curl -L -o origin/main.zip https://github.com/VHP4Safety/cloud/archive/refs/heads/main.zip
 	unzip origin/main.zip -d origin/unzipped/
 
+OUT="Services"
+IN="origin/unzipped/cloud-main/docs/service"
+
 build_from_origin: $(eval SHELL:=/bin/bash)
-	OUT="Services"
-	IN="origin/unzipped/cloud-main/docs/service"
-	pandoc --from=markdown --to=rst --output="$(OUT)/aopwiki/intro.rst" "$(IN)/aopwiki.md" \
+	pandoc --from=markdown --to=rst --output="$(OUT)/aopwiki/intro.rst" "$(IN)/aopwiki.md"
+	pandoc --from=markdown --to=rst --output="$(OUT)/cdkdepict/intro.rst" "$(IN)/cdkdepict.md"
+	pandoc --from=markdown --to=rst --output="$(OUT)/sysrev/intro.rst" "$(IN)/sysrev.md"
 
 #	pandoc --from=markdown --to=rst --output="$(OUT)/cdkdepict/intro.rst" "$$IN/cdkdepict.md" \
 #	pandoc --from=markdown --to=rst --output="$(OUT)/sysrev/intro.rst" "$$IN/sysrev.md"
