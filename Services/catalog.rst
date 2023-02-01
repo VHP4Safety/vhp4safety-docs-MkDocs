@@ -3,6 +3,7 @@
 	 alt="VHP4Safety logo" 
 
 	 src="https://vhp4safety.nl/wp\-content/uploads/sites/725/2021/05/VHP\-LOGO\-100mm\-RGB.png">
+
 VHP4Safety Cloud catalog
 ========================
 
@@ -17,6 +18,7 @@ and users can `request additional services <https://github.com/VHP4Safety/cloud/
 	 alt="screenshot of the service" 
 
 	 src="service/aopwiki.png">
+
 # AOP-Wiki Snorql UI
 ====================
 
@@ -29,6 +31,7 @@ Graphical interface to an AOP-Wiki SPARQL endpoint. `[more info <service/aopwiki
 	 alt="screenshot of the service" 
 
 	 src="service/bridgedb.png">
+
 # BridgeDb
 ==========
 
@@ -41,6 +44,7 @@ A framework to map identifiers between various biological databases and related 
 	 alt="screenshot of the service" 
 
 	 src="service/cdkdepict.png">
+
 # CDK Depict
 ============
 
@@ -53,6 +57,7 @@ A webservice that converts a SMILES into 2D depictions (SVG or PNG). `[more info
 	 alt="screenshot of the service" 
 
 	 src="service/decimer.png">
+
 # DECIMER
 =========
 
@@ -80,6 +85,7 @@ A service to support literature research. `[more info <service/sysrev.md>`_]
 	 alt="screenshot of the service" 
 
 	 src="service/txg\_mapr.png">
+
 # TXG-MAPr
 ==========
 
@@ -92,6 +98,7 @@ An R-Shiny-based implementation of weighted gene co-expression network analysis 
 	 alt="screenshot of the service" 
 
 	 src="service/VHP4Safety\_ChemicalCompounds.png">
+
 # VHP4Safety Wikibase
 =====================
 
@@ -104,6 +111,7 @@ A Wikibase instance to hold information about compounds. `[more info <service/wi
 	 alt="screenshot of the service" 
 
 	 src="service/wikipathways\_aop.png">
+
 # WikiPathways - AOP Portal
 ===========================
 
