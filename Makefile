@@ -2,21 +2,42 @@
 # Minimal makefile for Sphinx documentation
 #
 
+# get origin (docs from github 'cloud' repo)
+origin: $(eval SHELL:=/bin/bash)
+	curl -L -o origin/main.zip https://github.com/VHP4Safety/cloud/archive/refs/heads/main.zip
+	unzip origin/main.zip -d origin/unzipped/
+
+build_from_origin: $(eval SHELL:=/bin/bash)
+	OUT="Services"
+	IN="origin/unzipped/cloud-main/docs/service"
+	pandoc --from=markdown --to=rst --output="$(OUT)/aopwiki/intro.rst" "$(IN)/aopwiki.md" \
+
+#	pandoc --from=markdown --to=rst --output="$(OUT)/cdkdepict/intro.rst" "$$IN/cdkdepict.md" \
+#	pandoc --from=markdown --to=rst --output="$(OUT)/sysrev/intro.rst" "$$IN/sysrev.md"
+
+
+
 # update metadata
 metadata: 
-	python Services/aop_wiki/meta.py
-	python Services/cdk_depict/meta.py
+	python Services/aopwiki/meta.py
+	python Services/cdkdepict/meta.py
 	python Services/sysrev/meta.py
 
+
+# get images
+images: $(eval SHELL:=/bin/bash)
+	curl -o Services/aopwiki/aopwiki.png https://github.com/VHP4Safety/cloud/raw/main/docs/service/aopwiki.png
+	
 
 # update catalog and clean up
 catalog: $(eval SHELL:=/bin/bash)
 	rm -rf catalog.md
 	rm -rf Services/catalog.rst
-	curl -O https://raw.githubusercontent.com/VHP4Safety/cloud/main/docs/catalog.md
+	curl -o tmp/catalog.md https://raw.githubusercontent.com/VHP4Safety/cloud/main/docs/catalog.md
 #	mdToRst catalog.md | tee Services/catalog.rst
-	pandoc --from=markdown --to=rst --output=Services/catalog.rst catalog.md
-	rm -rf catalog.md
+	pandoc --from=markdown --to=rst --output=Services/catalog.rst tmp/catalog.md
+	rm -rf tmp/catalog.md
+
 
 # You can set these variables from the command line, and also
 # from the environment for the first two.

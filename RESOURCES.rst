@@ -35,3 +35,5 @@ Alternatively, you could use a Sphinx extension like sphinx-jsonschema which wou
 
 Keep in mind that the details of this process may depend on the specific format and structure of your JSON data, and the requirements of your Sphinx project.
 
+https://gist.github.com/jwebcat/5122366
+
