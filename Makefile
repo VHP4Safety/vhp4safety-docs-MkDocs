@@ -9,10 +9,13 @@ metadata:
 	python Services/sysrev/meta.py
 
 
-# update catalogue and clean up
+# update catalog and clean up
 catalog: $(eval SHELL:=/bin/bash)
+	rm -rf catalog.md
+	rm -rf Services/catalog.rst
 	curl -O https://raw.githubusercontent.com/VHP4Safety/cloud/main/docs/catalog.md
-	mdToRst catalog.md | tee Services/catalog.rst
+#	mdToRst catalog.md | tee Services/catalog.rst
+	pandoc --from=markdown --to=rst --output=Services/catalog.rst catalog.md
 	rm -rf catalog.md
 
 # You can set these variables from the command line, and also
