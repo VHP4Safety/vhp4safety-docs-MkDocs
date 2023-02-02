@@ -20,6 +20,10 @@ to use the software, models and data generated in the project.
    Services/aopwiki/aopwiki.rst
    Services/cdkdepict/cdkdepict.rst
    Services/sysrev/sysrev.rst
+   Services/decimer/decimer.rst
+   Services/popgen/popgen.rst
+   Services/txg_mapr/txg_mapr.rst
+   Services/wikibase/wikibase.rst
    Topics/Topics.rst
    Tutorials/Tutorials.rst
       

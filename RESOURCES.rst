@@ -37,3 +37,14 @@ Keep in mind that the details of this process may depend on the specific format 
 
 https://gist.github.com/jwebcat/5122366
 
+## autogenerate index file to include subfolders:
+
+import os
+
+folder = 'folder'
+
+subfolders = [d for d in os.listdir(folder) if os.path.isdir(os.path.join(folder, d))]
+
+toctree = '\n'.join(f'   {folder}/{d}/index' for d in subfolders)
+
+print(f'.. toctree::\n   :maxdepth: 2\n\n{toctree}')

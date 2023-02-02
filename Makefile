@@ -14,11 +14,11 @@ build_from_origin: $(eval SHELL:=/bin/bash)
 	pandoc --from=markdown --to=rst --output="$(OUT)/aopwiki/intro.rst" "$(IN)/aopwiki.md"
 	pandoc --from=markdown --to=rst --output="$(OUT)/cdkdepict/intro.rst" "$(IN)/cdkdepict.md"
 	pandoc --from=markdown --to=rst --output="$(OUT)/sysrev/intro.rst" "$(IN)/sysrev.md"
-
-#	pandoc --from=markdown --to=rst --output="$(OUT)/cdkdepict/intro.rst" "$$IN/cdkdepict.md" \
-#	pandoc --from=markdown --to=rst --output="$(OUT)/sysrev/intro.rst" "$$IN/sysrev.md"
-
-
+	pandoc --from=markdown --to=rst --output="$(OUT)/bridgedb/intro.rst" "$(IN)/bridgedb.md"
+	pandoc --from=markdown --to=rst --output="$(OUT)/decimer/intro.rst" "$(IN)/decimer.md"
+	pandoc --from=markdown --to=rst --output="$(OUT)/popgen/intro.rst" "$(IN)/popgen.md"
+	pandoc --from=markdown --to=rst --output="$(OUT)/txg_mapr/intro.rst" "$(IN)/txg_mapr.md"
+	pandoc --from=markdown --to=rst --output="$(OUT)/wikibase/intro.rst" "$(IN)/wikibase.md"
 
 # update metadata
 metadata: 
