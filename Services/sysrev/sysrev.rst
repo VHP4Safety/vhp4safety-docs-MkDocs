@@ -1,10 +1,10 @@
-.. raw:: html
-    :file: meta.html
-
-.. include:: intro.rst    
+.. include:: intro.rst
 
 Features
 -------------
 
 Demos
 -------------
+
+.. raw:: html
+    :file: meta.html

@@ -12,7 +12,7 @@ information, documentation, installation instructions and demos on how
 to use the software, models and data generated in the project.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    Introduction/intro.rst

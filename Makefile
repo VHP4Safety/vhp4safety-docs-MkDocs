@@ -25,7 +25,10 @@ metadata:
 	python Services/aopwiki/meta.py
 	python Services/cdkdepict/meta.py
 	python Services/sysrev/meta.py
-
+	python Services/decimer/meta.py
+	python Services/popgen/meta.py
+	python Services/txg_mapr/meta.py
+	python Services/wikibase/meta.py
 
 # get images
 images: $(eval SHELL:=/bin/bash)
@@ -40,7 +43,6 @@ catalog: $(eval SHELL:=/bin/bash)
 #	mdToRst catalog.md | tee Services/catalog.rst
 	pandoc --from=markdown --to=rst --output=Services/catalog.rst tmp/catalog.md
 	rm -rf tmp/catalog.md
-
 
 # You can set these variables from the command line, and also
 # from the environment for the first two.
@@ -59,5 +61,3 @@ help:
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
-
-
