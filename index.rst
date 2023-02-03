@@ -16,6 +16,7 @@ to use the software, models and data generated in the project.
    :caption: Contents:
 
    Introduction/intro.rst
+   Templates/templates.rst
    Services/catalog.rst
    Services/aopwiki/aopwiki.rst
    Services/cdkdepict/cdkdepict.rst
