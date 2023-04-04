@@ -24,30 +24,27 @@ names and external databases, the VHP4Safety Wikibase.
 Step 1
 
 Visit https://compoundcloud.wikibase.cloud/ and use the search box to find
-"aflatoxin B1". The resulting page should look something like this:
+"aflatoxin B1". The `resulting page <https://compoundcloud.wikibase.cloud/wiki/Item:Q1>` should look something like this:
 
-- TODO: insert image from https://compoundcloud.wikibase.cloud/wiki/Item:Q1
-- TODO: insart link https://compoundcloud.wikibase.cloud/wiki/Item:Q1
+.. |screenshot of aflatoxin B1 in the compound wiki| image:: Q1.png
 
 On this page we can find chemical information and links to other database.
 Information we can find include:
 
-- the SMILES: a line notation to describe the chemical structure (using a chemical graph approach)
-- the mass
-- the InChI and InChIKey: the global, unique identifier of this compound
+* the SMILES: a line notation to describe the chemical structure (using a chemical graph approach)
+* the mass
+* the InChI and InChIKey: the global, unique identifier of this compound
 
 Second, we find external identifiers and links to resources with more information
 about this compound. For example, for this compound we find a link to the
-ToxBank Wiki [REF] where the SEURAT-1 cluster projects collected information
+ToxBank Wiki [`paper` <https://doi.org/10.1002/minf.201200114>] where the SEURAT-1 cluster projects collected information
 about compounds in their discussion to reach their Gold Compound collection.
-
-- TODO: include a link to the research paper
 
 Other information we can find:
 
-- the Wikidata Q identifier: a link to Wikidata
-- the PubChem CID: a link to PubChem
-- xenobiotic metabolism pathway: a link to a WikiPathways describing experimental knowledge about the compound metabolism
+* the Wikidata Q identifier: a link to Wikidata
+* the PubChem CID: a link to PubChem
+* xenobiotic metabolism pathway: a link to a WikiPathways describing experimental knowledge about the compound metabolism
 
 Visualize a Structure
 ---------------------
