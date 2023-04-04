@@ -22,11 +22,15 @@ For this, we have set up a service to link specific chemical structures to
 names and external databases, the VHP4Safety Wikibase.
 
 Step 1
+^^^^^^
 
-Visit https://compoundcloud.wikibase.cloud/ and use the search box to find
+Visit `the compound wiki <https://compoundcloud.wikibase.cloud/>` and use the search box to find
 "aflatoxin B1". The `resulting page <https://compoundcloud.wikibase.cloud/wiki/Item:Q1>` should look something like this:
 
 .. |screenshot of aflatoxin B1 in the compound wiki| image:: Q1.png
+
+Step 2
+^^^^^^
 
 On this page we can find chemical information and links to other database.
 Information we can find include:
@@ -34,6 +38,8 @@ Information we can find include:
 * the SMILES: a line notation to describe the chemical structure (using a chemical graph approach)
 * the mass
 * the InChI and InChIKey: the global, unique identifier of this compound
+
+Write down the SMILES, which we are going to use in the next section.
 
 Second, we find external identifiers and links to resources with more information
 about this compound. For example, for this compound we find a link to the
@@ -49,8 +55,24 @@ Other information we can find:
 Visualize a Structure
 ---------------------
 
-... CDK Depict
+With the SMILES you got from the compound wiki, you can now visualize this
+with the `CDK Depict <https://cdkdepict.cloud.vhp4safety.nl/>` service.
 
+Step 3
+^^^^^^
+
+Copy/paste the SMILES into the text box and wait for CDK Depict to make a 2D depiction:
+
+.. |2D depictiong of the chemical structure of aflatoxin B1| image:: cdkdepict_vhp.png
+
+Note that you can change the depiction style/properties. For example, you can choose to not
+abbreviate long chains:
+
+.. |option to do not abbreviate groups| image:: cdkdepict_vhp2.png
+
+Or to show the CIP R/S labels:
+
+.. |option for R/S labelling| image:: cdkdepict_vhp3.png
 
 External databases
 ------------------
