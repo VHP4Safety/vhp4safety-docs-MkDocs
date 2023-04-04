@@ -27,6 +27,7 @@ to use the software, models and data generated in the project.
    Services/wikibase/wikibase.rst
    Topics/Topics.rst
    Tutorials/Tutorials.rst
+   Tutorials/cheminfo/intro.rst
       
 Indices and tables
 ==================
