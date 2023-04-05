@@ -16,7 +16,9 @@ structure from a chemical name. That is, a name to structure conversion.
 
 There are many solutions available, including the main chemical compounds databases
 like PubChem and ChemSpider. Because we want to use a common VHP4Safety language (a controlled vocabulary or
-glossary), we can also use a VHP4Safety solution for this task.
+`glossary`_), we can also use a VHP4Safety solution for this task.
+
+.. _glossary: https://glossary.vhp4safety.nl/
 
 For this, we have set up a service to link specific chemical structures to
 names and external databases, the VHP4Safety Wikibase.
@@ -89,7 +91,22 @@ Or to show the CIP R/S labels:
 External databases
 ------------------
 
-... back in the Wikibase
+Back in the wikibase, we can find links to other databases. The compound
+wiki provides links to the following databases. For each we can list the chemical
+compounds that have links to those resources:
+
+- ToxBank: general toxicology info (`all ToxBank compounds`_)
+- WikiPathways: compound metabolism (`all WikiPathways compounds`_)
+
+.. _all ToxBank compounds: https://compoundcloud.wikibase.cloud/query/#PREFIX%20wd%3A%20%3Chttps%3A%2F%2Fcompoundcloud.wikibase.cloud%2Fentity%2F%3E%0APREFIX%20wdt%3A%20%3Chttps%3A%2F%2Fcompoundcloud.wikibase.cloud%2Fprop%2Fdirect%2F%3E%0A%0ASELECT%20%3Fcmp%20%3FcmpLabel%20%3Fpubchem%20%3Ftoxbank%0A%20%20%20%20%20%20%20%28GROUP_CONCAT%28DISTINCT%20%3FroleLabel%3B%20separator%3D%22%2C%20%22%29%20AS%20%3Froles%29%0AWHERE%20%7B%0A%20%20%3Fcmp%20wdt%3AP13%20%3Fpubchem%20%3B%20wdt%3AP4%20%3Ftoxbank%20.%0A%20%20OPTIONAL%20%7B%20%3Fcmp%20wdt%3AP17%20%3Frole%20.%20%3Frole%20rdfs%3Alabel%20%3FroleLabel%7D%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%7D%20GROUP%20BY%20%3Fcmp%20%3FcmpLabel%20%3Fpubchem%20%3Ftoxbank
+.. _all WikiPathways compounds: https://compoundcloud.wikibase.cloud/query/#PREFIX%20wd%3A%20%3Chttps%3A%2F%2Fcompoundcloud.wikibase.cloud%2Fentity%2F%3E%0APREFIX%20wdt%3A%20%3Chttps%3A%2F%2Fcompoundcloud.wikibase.cloud%2Fprop%2Fdirect%2F%3E%0A%0ASELECT%20%3Fcmp%20%3FcmpLabel%20%3Fxenometabolism%0A%20%20%28CONCAT%28%22https%3A%2F%2Fwikipathways.org%2Finstance%2F%22%2C%20str%28%3Fxenometabolism%29%29%20AS%20%3FxenometabolismURL%29%0AWHERE%20%7B%0A%20%20%3Fcmp%20wdt%3AP13%20%3Fpubchem%20%3B%20wdt%3AP19%20%3Fxenometabolism%20.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%7D%20GROUP%20BY%20%3Fcmp%20%3FcmpLabel%20%3Fxenometabolism
+
+These resources can provide important information, but for new compounds
+you mean also need computationally predicted properties. The platform
+support this. The following section uses the SOMBIE tool, that predicts
+site-of-metabolism properties, starting with the SMILES we get from the
+compound wiki.
+
 
 Metabolite prediction
 ---------------------
