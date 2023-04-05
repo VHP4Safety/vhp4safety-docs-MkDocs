@@ -24,8 +24,12 @@ names and external databases, the VHP4Safety Wikibase.
 Step 1
 ^^^^^^
 
-Visit `the compound wiki <https://compoundcloud.wikibase.cloud/>` and use the search box to find
-"aflatoxin B1". The `resulting page <https://compoundcloud.wikibase.cloud/wiki/Item:Q1>` should look something like this:
+Visit `the compound wiki`_ and use the search box to find
+"aflatoxin B1". The `resulting page`_ should look something like this:
+
+.. _the compound wiki: https://compoundcloud.wikibase.cloud/
+.. _resulting page : https://compoundcloud.wikibase.cloud/wiki/Item:Q1
+
 
 .. image:: ./Q1.png
    :alt: screenshot of aflatoxin B1 in the compound wiki
