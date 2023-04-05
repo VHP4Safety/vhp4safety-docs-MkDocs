@@ -48,8 +48,10 @@ Write down the SMILES, which we are going to use in the next section.
 
 Second, we find external identifiers and links to resources with more information
 about this compound. For example, for this compound we find a link to the
-ToxBank Wiki [`paper` <https://doi.org/10.1002/minf.201200114>] where the SEURAT-1 cluster projects collected information
+ToxBank Wiki (doi:`10.1002/minf.201200114`_) where the SEURAT-1 cluster projects collected information
 about compounds in their discussion to reach their Gold Compound collection.
+
+.. _10.1002/minf.201200114: https://doi.org/10.1002/minf.201200114
 
 Other information we can find:
 
@@ -61,7 +63,9 @@ Visualize a Structure
 ---------------------
 
 With the SMILES you got from the compound wiki, you can now visualize this
-with the `CDK Depict <https://cdkdepict.cloud.vhp4safety.nl/>` service.
+with the `CDK Depict`_ service.
+
+.. _CDK Depict: https://cdkdepict.cloud.vhp4safety.nl/
 
 Step 3
 ^^^^^^
