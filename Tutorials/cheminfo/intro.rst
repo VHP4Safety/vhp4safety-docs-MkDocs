@@ -27,7 +27,8 @@ Step 1
 Visit `the compound wiki <https://compoundcloud.wikibase.cloud/>` and use the search box to find
 "aflatoxin B1". The `resulting page <https://compoundcloud.wikibase.cloud/wiki/Item:Q1>` should look something like this:
 
-.. |screenshot of aflatoxin B1 in the compound wiki| image:: Q1.png
+.. image:: ./Q1.png
+   :alt: screenshot of aflatoxin B1 in the compound wiki
 
 Step 2
 ^^^^^^
@@ -63,16 +64,19 @@ Step 3
 
 Copy/paste the SMILES into the text box and wait for CDK Depict to make a 2D depiction:
 
-.. |2D depictiong of the chemical structure of aflatoxin B1| image:: cdkdepict_vhp.png
+.. image:: cdkdepict_vhp.png
+   :alt: 2D depictiong of the chemical structure of aflatoxin B1
 
 Note that you can change the depiction style/properties. For example, you can choose to not
 abbreviate long chains:
 
-.. |option to do not abbreviate groups| image:: cdkdepict_vhp2.png
+..  image:: cdkdepict_vhp2.png
+    :alt: option to do not abbreviate groups
 
 Or to show the CIP R/S labels:
 
-.. |option for R/S labelling| image:: cdkdepict_vhp3.png
+.. image:: cdkdepict_vhp3.png
+   :alt: option for R/S labelling
 
 External databases
 ------------------
