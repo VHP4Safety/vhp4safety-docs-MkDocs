@@ -28,6 +28,7 @@ to use the software, models and data generated in the project.
    Topics/Topics.rst
    Tutorials/Tutorials.rst
    Tutorials/cheminfo/intro.rst
+   Tutorials/bridgedb/gene_hgnc_name_to_ensembl.rst
       
 Indices and tables
 ==================
