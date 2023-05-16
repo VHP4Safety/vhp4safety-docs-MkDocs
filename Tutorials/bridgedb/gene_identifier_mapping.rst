@@ -1,13 +1,15 @@
-==================================================================
-Translating Gene HGNC symbols to Ensembl Identifiers with BridgeDb
-==================================================================
+======================================
+Mapping Gene Identifiers with BridgeDb
+======================================
 
-This tutorial presents how `HGNC
-symbols <https://en.wikipedia.org/wiki/HUGO_Gene_Nomenclature_Committee>`__
-can be translated to `Ensembl
-identifiers <https://www.ensembl.org/info/genome/stable_ids/index.html>`__
+Genes can have different identifiers in different databases. BridgeDb is
+a tool to map the identifiers from different databases. This tutorial
+presents how an exemplary `HGNC
+symbol <https://en.wikipedia.org/wiki/HUGO_Gene_Nomenclature_Committee>`__
+can be translated to its `Ensembl
+identifier <https://www.ensembl.org/info/genome/stable_ids/index.html>`__
 with BridgeDb. This work is based on the tutorial to show the use case
-of linking Adeverse Outcome Pathways to
+of linking Adverse Outcome Pathways to
 `WikiPathways <https://www.wikipathways.org/>`__ which was a part of the
 `OpenRiskNet <https://openrisknet.org/>`__. The original tutorial using
 the Python language can be found
@@ -31,7 +33,7 @@ REST webservice at https://bridgedb.cloud.vhp4safety.nl/ through R.
 Setting Up a Query
 ==================
 
-In this tutorial, the goal is to find the Ensembl identifiers for the
+In this tutorial, the goal is to find the Ensembl identifier(s) for the
 gene with the HGNC symbol of
 `MECP2 <https://en.wikipedia.org/wiki/MECP2>`__. In order to reach the
 required information, we need to make a query by setting up an URL in R
@@ -44,8 +46,9 @@ as below.
 
 In the above command, ``H`` indicates a query, whereas ``MECP2`` is the
 HGNC symbol. The HGNC symbol can be replaced with another symbol of
-interest depending on the user’s needs. **Where can we find a list of
-HGNC symbols that can be used in BridgeDb?**
+interest depending on the user’s needs (please see BridgeDb’s `system
+codes page <https://www.bridgedb.org/pages/system-codes.html>`__ to see
+how other databases are coded).
 
 Making the Query
 ================
@@ -78,7 +81,7 @@ immediately.
 ::
 
    ## Response [https://bridgedb.cloud.vhp4safety.nl/Human/xrefs/H/MECP2]
-   ##   Date: 2023-05-04 12:13
+   ##   Date: 2023-05-16 09:55
    ##   Status: 200
    ##   Content-Type: text/plain; charset=UTF-8
    ##   Size: 8.5 kB
