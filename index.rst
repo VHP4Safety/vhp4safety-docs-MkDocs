@@ -29,6 +29,7 @@ to use the software, models and data generated in the project.
    Tutorials/Tutorials.rst
    Tutorials/cheminfo/intro.rst
    Tutorials/bridgedb/gene_identifier_mapping.rst
+   Tutorials/aoplink/aoplink_rmarkdown.rst
       
 Indices and tables
 ==================
