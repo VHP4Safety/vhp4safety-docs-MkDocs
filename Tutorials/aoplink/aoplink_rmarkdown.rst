@@ -14,18 +14,8 @@ A few packages needed to be loaded in order to complete the workflow.
 .. code:: r
 
    library(SPARQL)
-
-::
-
-   ## Loading required package: XML
-
-::
-
-   ## Loading required package: RCurl
-
-.. code:: r
-
    library(flextable)
+   library(igraph)
 
 Note that the SPARQL package is available on CRAN only in the archive.
 So, one needs to download the .tar.gz file from the archives (here
@@ -761,3 +751,39 @@ Creating the overview table
    ## 58    KE 769                                  Increase, Oxidative metabolism
    ## 61    KE 786                            Increase, Cytotoxicity (hepatocytes)
    ## 62    KE 787         Increase, Regenerative cell proliferation (hepatocytes)
+
+.. code:: r
+
+   # Listing all intermediate KEs that are not MIEs or AOs. 
+   kes_intermediate <- kes[!(kes %in% mies) & !(kes %in% aos)]
+
+.. code:: r
+
+   # Creating the AOP plot
+   pathway <- list()
+   for (i in 1:length(kers)) {
+     ker   <- kers[i]
+     query <- paste0('SELECT ?KE_UP_ID ?KE_DOWN_ID 
+                   WHERE{
+                   ?KER_URI a aopo:KeyEventRelationship; rdfs:label ?KER_ID; aopo:has_upstream_key_event ?KE_UP_URI; aopo:has_downstream_key_event ?KE_DOWN_URI.
+                   ?KE_UP_URI rdfs:label ?KE_UP_ID.
+                   ?KE_DOWN_URI rdfs:label ?KE_DOWN_ID.
+                   FILTER (?KER_ID = "', ker, '")}')
+     pathway[[i]] <- SPARQL(aopwikisparql, query)$results
+     names(pathway)[i] <- ker
+   }
+
+   pathway_plot <- make_graph(edges=unlist(pathway))
+
+   pathway_color <- rep(NA, length(names(V(pathway_plot))))
+   pathway_color[names(V(pathway_plot)) %in% mies]              <- "green"
+   pathway_color[names(V(pathway_plot)) %in% kes_intermediate]  <- "yellow"
+   pathway_color[names(V(pathway_plot)) %in% aos]               <- "red"
+   V(pathway_plot)$color <- pathway_color
+   par(mar = c(0, 0, 0, 0))
+   plot(pathway_plot)
+
+.. figure:: aop_plot.png
+   :alt: plot of chunk unnamed-chunk-7
+
+   plot of chunk unnamed-chunk-7
