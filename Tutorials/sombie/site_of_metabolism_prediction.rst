@@ -1,10 +1,11 @@
+=============================
 Site-of-Metabolism Prediction
 =============================
 
 This page presents a tutorial for `SOM
 Prediction <https://cloud.vhp4safety.nl/service/sombie.html>`__. The
 tutorial uses Python language and the tutorial is still under
-development.
+development. The corresponding Jupyter Notebook file can be seen `here <https://github.com/VHP4Safety/vhp4safety-docs/blob/main/Tutorials/sombie/site_of_metabolism_prediction.ipynb>`__.
 
 .. code:: ipython3
 
