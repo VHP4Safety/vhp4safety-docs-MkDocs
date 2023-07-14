@@ -16,6 +16,7 @@ A few packages needed to be loaded in order to complete the workflow.
    library(SPARQL)
    library(flextable)
    library(igraph)
+   # library(networkD3)
 
 Note that the SPARQL package is available on CRAN only in the archive.
 So, one needs to download the .tar.gz file from the archives (here
@@ -67,7 +68,7 @@ Commission - Joint Research Centre. It is developed to facilitate
 collaborative AOP development, storage of AOPs, and therefore allow
 reusing toxicological knowledge for risk assessors. This Case Study has
 converted the AOP-Wiki XML data into an RDF schema, which has been
-exposed in a public SPARQL endpoint in the OpenRiskNet e-infrastructure.
+exposed in a public SPARQL endpoint as a service by VHP4Safety.
 
 Implementation
 --------------
@@ -760,6 +761,7 @@ Creating the overview table
 .. code:: r
 
    # Creating the AOP plot
+   # library(SPARQL)
    pathway <- list()
    for (i in 1:length(kers)) {
      ker   <- kers[i]
@@ -769,6 +771,8 @@ Creating the overview table
                    ?KE_UP_URI rdfs:label ?KE_UP_ID.
                    ?KE_DOWN_URI rdfs:label ?KE_DOWN_ID.
                    FILTER (?KER_ID = "', ker, '")}')
+     # tmp <- SPARQL(aopwikisparql, query)
+     # pathway[[i]] <- tmp$results
      pathway[[i]] <- SPARQL(aopwikisparql, query)$results
      names(pathway)[i] <- ker
    }
@@ -787,3 +791,52 @@ Creating the overview table
    :alt: plot of chunk unnamed-chunk-7
 
    plot of chunk unnamed-chunk-7
+
+.. code:: r
+
+   # A very basic interactive graph can be created in RStudio with:
+   # networkD3::simpleNetwork(as.data.frame(matrix(unlist(pathway), 
+   #                                               byrow=TRUE, ncol=2)))
+
+Query All Chemicals that are Part of the Selected AOP
+-----------------------------------------------------
+
+.. code:: r
+
+   query <- paste0('PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+                   SELECT ?CAS_ID (fn:substring(?CompTox,33) as ?CompTox_ID) ?Chemical_name
+                   WHERE{
+                   ?AOP_URI a aopo:AdverseOutcomePathway; ncit:C54571 ?Stressor.
+                   ?Stressor aopo:has_chemical_entity ?Chemical.
+                   ?Chemical cheminf:000446 ?CAS_ID; dc:title ?Chemical_name.
+                   OPTIONAL {?Chemical cheminf:000568 ?CompTox.}
+                   FILTER (?AOP_URI = aop:', aop_id, ')}
+                   ')
+
+   res <- SPARQL(aopwikisparql, query)
+   res <- res$results[, c("Chemical_name", "CAS_ID", "CompTox_ID")]
+
+   # List of compounds.
+   res
+
+::
+
+   ##                Chemical_name     CAS_ID    CompTox_ID
+   ## 1 Di(2-ethylhexyl) phthalate   117-81-7 DTXSID5020607
+   ## 2                Gemfibrozil 25812-30-0 DTXSID0020652
+   ## 3                  Nafenopin  3771-19-5 DTXSID8020911
+   ## 4                Bezafibrate 41859-67-0 DTXSID3029869
+   ## 5                Fenofibrate 49562-28-9 DTXSID2029874
+   ## 6             Pirinixic acid 50892-23-4 DTXSID4020290
+   ## 7               Ciprofibrate 52214-84-3 DTXSID8020331
+   ## 8                 Clofibrate   637-07-0 DTXSID3020336
+
+.. code:: r
+
+   # CAS-IDs of the compounds
+   res$CAS_ID
+
+::
+
+   ## [1] "117-81-7"   "25812-30-0" "3771-19-5"  "41859-67-0" "49562-28-9" "50892-23-4"
+   ## [7] "52214-84-3" "637-07-0"
