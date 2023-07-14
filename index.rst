@@ -30,6 +30,7 @@ to use the software, models and data generated in the project.
    Tutorials/cheminfo/intro.rst
    Tutorials/bridgedb/gene_identifier_mapping.rst
    Tutorials/aoplink/aoplink_rmarkdown.rst
+   Tutorials/sombie/site_of_metabolism_prediction.rst
       
 Indices and tables
 ==================
