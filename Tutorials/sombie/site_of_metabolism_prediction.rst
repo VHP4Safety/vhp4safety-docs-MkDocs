@@ -1,11 +1,11 @@
-=============================
 Site-of-Metabolism Prediction
 =============================
 
 This page presents a tutorial for `SOM
 Prediction <https://cloud.vhp4safety.nl/service/sombie.html>`__. The
 tutorial uses Python language and the tutorial is still under
-development. The corresponding Jupyter Notebook file can be seen `here <https://github.com/VHP4Safety/vhp4safety-docs/blob/main/Tutorials/sombie/site_of_metabolism_prediction.ipynb>`__.
+development. The Jupyter Notebook file for this tutorial can be found
+`here <https://github.com/VHP4Safety/vhp4safety-docs/blob/main/Tutorials/sombie/site_of_metabolism_prediction.ipynb>`__.
 
 .. code:: ipython3
 
@@ -23,9 +23,13 @@ development. The corresponding Jupyter Notebook file can be seen `here <https://
 Performing SMARTCyp predictions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-MDStudio SMARTCyp provides a convenient endpoint to the SMARTCyp
-software supporting all of the configuration options and, ligand input
-formats and result formats.
+Integration is based on the
+`MDStudio <https://github.com/MD-Studio/MDStudio>`__ wrapper around
+SMARTCyp, which provides a convenient endpoint to the
+`SMARTCyp <https://smartcyp.sund.ku.dk/about>`__
+software\ `ref <https://pubs.acs.org/doi/abs/10.1021/ml100016x>`__\ ,
+supporting all of the configuration options, ligand input formats and
+result formats.
 
 .. code:: ipython3
 
@@ -52,9 +56,9 @@ for SMARTCyp. In addition SMARTCyp accepts 2D and 3D structure formats
 using the ‘mol’ parameter (see below). Returned results are always
 wrapped as a JSON object containing the prediction results as either
 JSON (default), CSV or HTML format. In addition you can request the 1D
-images normally displayed as part of the HTML output of SMARTCyp to be
+images (normally displayed as part of the HTML output of SMARTCyp) to be
 included in the results (output_png = True). They will be base64 encoded
-and thus will require decoding first (shown below). In de example below
+and thus will require decoding first (shown below). In the example below
 the prediction results are loaded into a Pandas DataFrame ready for
 analysis and friendly visualization.
 
