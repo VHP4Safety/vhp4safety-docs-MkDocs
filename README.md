@@ -17,7 +17,7 @@ pip install spinx_rtd_theme
 On Debian, instead of the above, you can also use the `.deb` binaries:
 
 ```shell
-sudo apt install python3-pandas python3-sphinx
+sudo apt install python3-pandas python3-sphinx python3-sphinx-rtd-theme
 ```
 
 ## Build locally
