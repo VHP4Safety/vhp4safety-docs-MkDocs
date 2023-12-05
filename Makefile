@@ -39,6 +39,7 @@ images: $(eval SHELL:=/bin/bash)
 catalog: $(eval SHELL:=/bin/bash)
 	rm -rf catalog.md
 	rm -rf Services/catalog.rst
+	mkdir -m tmp/
 	curl -o tmp/catalog.md https://raw.githubusercontent.com/VHP4Safety/cloud/main/docs/catalog.md
 #	mdToRst catalog.md | tee Services/catalog.rst
 	pandoc --from=markdown --to=rst --output=Services/catalog.rst tmp/catalog.md
