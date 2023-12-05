@@ -12,6 +12,14 @@ pip install sphinx
 pip install spinx_rtd_theme
 ```
 
+### Debian
+
+On Debian, instead of the above, you can also use the `.deb` binaries:
+
+```shell
+sudo apt install python3-pandas python3-sphinx
+```
+
 ## Build locally
 To update all content, get external content and build the site locally run from the project root in the Terminal:
 
